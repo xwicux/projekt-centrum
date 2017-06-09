@@ -8,13 +8,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <ListView Margin="10" Name="lvUsers">
+
+        <Button x:Name="guzik" Content="ZapiszBankiListe" HorizontalAlignment="Left" Height="77" Margin="120,81,0,0" VerticalAlignment="Top" Width="127" Click="guzik_Click"/>
+        <Label x:Name="napis" Content="Label" HorizontalAlignment="Left" Margin="339,198,0,0" VerticalAlignment="Top"/>
+        <ListView x:Name="listapokaz" HorizontalAlignment="Left" Height="113" Margin="282,10,0,0" VerticalAlignment="Top" Width="225">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Nazwa" Width="120" DisplayMemberBinding="{Binding imie}" />
-                    <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding nazwisko}" />
+                    <GridViewColumn Header="Imie" Width="120" DisplayMemberBinding="{Binding imie}"></GridViewColumn>
+                    <GridViewColumn Header="Nazwisko" Width="120" DisplayMemberBinding="{Binding nazwisko}"></GridViewColumn>
+
                 </GridView>
             </ListView.View>
         </ListView>
+        <Button x:Name="zapis" Content="ZapiszListeKlientow" HorizontalAlignment="Left" Height="36" Margin="10,10,0,0" VerticalAlignment="Top" Width="92" Click="zapis_Click"/>
+        <ListView x:Name="listabankipokaz" HorizontalAlignment="Left" Height="115" Margin="10,198,0,0" VerticalAlignment="Top" Width="237" RenderTransformOrigin="0.656,0.43">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nazwa" Width="100" DisplayMemberBinding="{Binding nazwa}"></GridViewColumn>
+                    <GridViewColumn Header="Id" Width="60" DisplayMemberBinding="{Binding id}"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>

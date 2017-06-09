@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bank.cs" />
     <Compile Include="CentrumObslugiTransakcji.cs" />
     <Compile Include="Firma.cs" />
     <Compile Include="Transakcja.cs" />

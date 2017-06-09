@@ -23,7 +23,7 @@ namespace WpfApplication1
             //dokonaj walidacji karty
             Bank bank = this.wyszukajBankPoId(karta);
             Transakcja transakcja = new Transakcja(kwota, firma, karta, DateTime.Now);
-
+            
 
             bool wynikAutoryzacji = bank.autoryzacjaTransakcji(transakcja);
             this.zapiszDoArchiwum(transakcja, wynikAutoryzacji);
